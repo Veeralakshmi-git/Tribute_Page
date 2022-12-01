@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale-1.0">
+  <link rel="stylesheet" href="./flex.css">
+  <title>Dr A.P.J</title>
+</head>
+<body>
+  <nav class="ban">
+    <div class="logo">      <h4>WELCOME</h4>
+      </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+          <li><a href="#honour">Awards</a></li>            
+      </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3">
+        </div>
+      </div>
+  </nav>
+   <main id="main">
+  <section id="home">
+    <h1 id="title">Dr.A.P.J Abdul Kalam</h1><br>
+    <p>"Missile Man Of India , President Of  The Youth"</p>
+    <div id="img-div">
+      <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Vladimir_Putin_with_Abdul_Kalam_26_January_2007.jpg" alt="president of india" />
+      <figcaption id="img-caption">Kalam(left)along with Vladimir Putin and Manmohan Singh during his presidency
+        <div class="quote"><span><i>"As A CHILD OF GOD, I AM GREATER THAN ANYTHING THAT HAPPEN TO ME."</i></span>
+        <p class="quotee">~ Dr A.P.J</p>
+      </figcaption>
+      </div>
+    </section>
+  <section id="about">
+    <h2>Here's the Biography of Dr. Kalam:</h2>
+    <div id="tribute-info">
+    <ul>
+      <li><b>1931-</b>Born in Rameshwaram,India.</li>
+      <li><b>1950-</b> completed his schooling at the Schwartz Higher Secondary School, Ramanathapuram.</li>
+      <li><b>1954-</b>he graduated in physics from Saint Joseph's College, Tiruchirappalli, then affiliated with the University of Madras.</li>
+      <li><b>1955-</b>He moved to Madras(chennai) to study aerospace engineering in Madras Institute of Technology(MIT).</li>
+      <li><b>1960-</b>After graduating from the Madras Institute of Technology in 1960, Kalam joined the Aeronautical Development Establishment of the Defence Research and Development Organisation as a scientist after becoming a member of the Defence Research & Development Service. </li>
+      <li><b>1969-</b> Kalam was transferred to the Indian Space Research Organisation (ISRO).</li>
+      <li><b>2002-</b>Kalam became the 11th president of the Republic of India. </li>
+      <li><b>2008-</b>After leaving office, Kalam became a visiting professor at the IITs' (Indian Institute of Management).chancellor of the Indian Institute of Space Science and Technology Thiruvananthapuram; professor of Aerospace Engineering at Anna University and Many Other Educational Institution.</li>
+      <li><b>2015-</b>Died In Shillong,India.</li>
+      </ul>
+    </div>
+    </section>
+  <section id="work">
+    <h2>Here's Some of the Work of Dr. Kalam:</h2>
+    <div id="tribute-work">
+    <ul>
+        <li><b>1965-</b>Kalam had first started work on an expandable rocket project independently at DRDO.</li>
+        <li><b>1970-</b>Kalam directed two projects, Project Devil and Project Valiant, which sought to develop ballistic missiles from the technology of the successful SLV programme.</li>
+        <li><b>1980-</b>He was the project director of India's first Satellite Launch Vehicle (SLV-III) which successfully deployed the Rohini satellite.</li>
+        <li><b>1992-1999-</b>Kalam served as the Chief Scientific Adviser to the Prime Minister and Secretary of the Defence Research and Development Organisation.</li>
+        <li><b>1998-</b>along with cardiologist Soma Raju, Kalam developed a low cost coronary stent, named the "Kalam-Raju Stent"</li>
+        <li><b>2002-</b>became the President of India,He was also the first scientist and the first bachelor to occupy Rashtrapati Bhawan</li>
+        <li><b>2003-</b>Kalam supported the need of Uniform Civil Code in India.</li>
+        <li><b>2006-</b>signing the Office of Profit Bill was the toughest decision he had taken during his tenure.</li>
+        <li><b>2012-</b>Kalam launched a programme for the youth of India called the What Can I Give Movement, with a central theme of defeating corruption.</li>
+    </ul>
+</div>
+    </section>
+  <section id="honour">
+    <h2>Here's Some of the Awards of Dr. Kalam:</h2>
+    <div id="tribute-honour">
+    <ul>
+        <li><b>1981-</b>Padma Bhushan by Government of India.</li>
+        <li><b>1990-</b>Padma Vibhushan by Government of India.</li>
+        <li><b>1994-</b>Distinguished Fellow by Institute of Directors (India).</li>
+        <li><b>1995-</b>Honorary Fellow by National Academy of Medical Sciences of india.</li>
+        <li><b>1997-</b>Bharat Ratna by President Of India.</li>
+        <li><b>1998-</b>Veer Savarkar Award by Government of India.</li>
+        <li><b>2000-</b>Ramanujan Award by Alwars Research Centre, Chennai.</li>
+        <li><b>2007-</b>King Charles II Medal, Royal Society, UK.</li>
+        <li><b>2008-</b>Doctor of Science by Aligarh Muslim University, Aligarh.</li>
+        <li><b>2008-</b>Doctor of Engineering by Nanyang Technological University, Singapore. </li>
+        <li><b>2009-</b>Hoover Medal by ASME Foundation, USA.</li>
+       
+    </ul>
+</div>
+<p class="last">If you have time, you should read more about this incredible human being on his <a target="_blank" id="tribute-link" href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam#cite_note-56">Wikipedia entry</a>.</p>
+    </section>
+
+</main>
+</body>
+    
+<script>
+  const navSlide= () =>{
+    const burger= document.querySelector('.burger');
+   const nav= document.querySelector('.nav-links');
+ const navLinks=document.querySelectorAll('.nav-links li');
+   burger.addEventListener('click',() => {
+   nav.classList.toggle('nav-active');
+
+    navLinks.forEach((link,index) => {
+     if(link.style.animation ){
+       link.style.animation ='';
+     }
+     else{
+     link.style.animation =`navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
+     }
+   }); 
+   });
+  
+  }
+  
+  navSlide();
+ 
+</script>  
+</html>
